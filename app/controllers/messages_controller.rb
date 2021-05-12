@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   def index
     @message = Message.new
-    @messages = @room.messages.includes(:user)
+    @messages = @room.messages.includes(:user, :stylist)
   end
 
   def create
